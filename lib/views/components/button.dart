@@ -9,8 +9,9 @@ class ButtonComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-      child: title,
-      onPressed: onPressed,
-    );
+        child: title,
+        onPressed: onPressed,
+        color: Colors.blue,
+        textColor: Colors.white);
   }
 }

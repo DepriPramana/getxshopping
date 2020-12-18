@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../controllers/cart_controller.dart';
 import '../controllers/shopping_controller.dart';
+import 'components/button.dart';
 
 class ShoppingPage extends StatelessWidget {
   final shoppingController = Get.put(ShoppingController());
@@ -51,14 +52,10 @@ class ShoppingPage extends StatelessWidget {
                                       style: TextStyle(fontSize: 24)),
                                 ],
                               ),
-                              RaisedButton(
-                                onPressed: () {
-                                  cartController
-                                      .addToCart(controller.products[index]);
-                                },
-                                color: Colors.blue,
-                                textColor: Colors.white,
-                                child: Text('Add to Cart'),
+                              ButtonComponents(
+                                onPressed: () => cartController
+                                    .addToCart(controller.products[index]),
+                                title: Text('Add to Cart'),
                               ),
                               Obx(() => IconButton(
                                     icon: controller

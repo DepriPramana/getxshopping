@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-import 'package:getxshopping/cubit/weather_cubit.dart';
 
+import '../../../bloc/weather_bloc.dart';
 import '../../../data/models/weather.dart';
 import 'input_field.dart';
 
@@ -17,7 +17,7 @@ class _WeatherSearchPageState extends State<WeatherSearchPage> {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 16),
       alignment: Alignment.center,
-      child: BlocConsumer<WeatherCubit, WeatherState>(
+      child: BlocConsumer<WeatherBloc, WeatherState>(
         listener: (context, state) {
           if (state is WeatherError) {
             Get.snackbar('Hi', state.message,

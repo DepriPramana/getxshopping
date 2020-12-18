@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:getxshopping/cubit/weather_cubit.dart';
-import 'package:getxshopping/data/weather_repository.dart';
 
+import '../../bloc/weather_bloc.dart';
+import '../../data/weather_repository.dart';
 import 'components/weather_search_page.dart';
 
 class WeatherPage extends StatelessWidget {
@@ -16,7 +16,7 @@ class WeatherPage extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 16),
         alignment: Alignment.center,
         child: BlocProvider(
-          create: (context) => WeatherCubit(FakeWeatherRepository()),
+          create: (context) => WeatherBloc(FakeWeatherRepository()),
           child: WeatherSearchPage(),
         ),
       ),

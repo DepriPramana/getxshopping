@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:getxshopping/cubit/weather_cubit.dart';
+
+import '../../../bloc/weather_bloc.dart';
 
 class CityInputField extends StatelessWidget {
   @override
@@ -20,7 +21,6 @@ class CityInputField extends StatelessWidget {
   }
 
   void submitCityName(BuildContext context, String cityName) {
-    final weatherCubit = BlocProvider.of<WeatherCubit>(context);
-    weatherCubit.getWeather(cityName);
+    BlocProvider.of<WeatherBloc>(context).add(GetWeather(cityName: cityName));
   }
 }
