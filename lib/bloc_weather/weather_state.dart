@@ -11,6 +11,8 @@ class WeatherInitial extends WeatherState {
 
 class WeatherLoading extends WeatherState {
   const WeatherLoading();
+
+  factory WeatherLoading.initial() => WeatherLoading();
 }
 
 class WeatherLoaded extends WeatherState {

@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-import 'package:getxshopping/data/models/weather.dart';
-import 'package:getxshopping/data/weather_repository.dart';
+import '../data/models/weather.dart';
+import '../data/weather_repository.dart';
 
 part 'weather_event.dart';
 part 'weather_state.dart';
